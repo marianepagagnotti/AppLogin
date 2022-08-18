@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="login.View.Login">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="#051b30" Offset="0.3" />
+            <GradientStop Color="#004a91" Offset="1.1" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame CornerRadius="10"
+                   x:Name="frm_login"
+                   
+                   HasShadow="False"
+                   VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label Text="Login de Usuários"
+                           TextTransform="Uppercase"
+                           TextColor="Black"
+                           FontSize="Title"                           
+                           HorizontalTextAlignment="Center" />
+
+                    <Label Text="E-mail:" TextColor="Black" />
+                    <Entry x:Name="txt_email"
+                           TextColor="Black"
+                           Placeholder="Email de cadastro" />
+
+                    <Label Text="Senha:" TextColor="Black" />
+                    <Entry x:Name="txt_senha" TextColor="Black" Placeholder="Mínimo 4 digitos" IsPassword="True" />
+
+                    <Button Text="Entrar" Clicked="Button_Clicked" TextColor="Black" BorderColor="Black" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
